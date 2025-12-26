@@ -153,7 +153,7 @@ func TestPeekLast(t *testing.T) {
 	}
 }
 
-func TestClear(t *testing.T) {
+func TestQueueClear(t *testing.T) {
 	q := NewQueue[int]()
 	q.Enqueue(1)
 	q.Enqueue(2)
@@ -169,7 +169,7 @@ func TestClear(t *testing.T) {
 	}
 }
 
-func TestLen(t *testing.T) {
+func TestQueueLen(t *testing.T) {
 	q := NewQueue[int]()
 
 	if q.Len() != 0 {
@@ -193,7 +193,7 @@ func TestLen(t *testing.T) {
 	}
 }
 
-func TestIsEmpty(t *testing.T) {
+func TestQueueIsEmpty(t *testing.T) {
 	q := NewQueue[int]()
 
 	if !q.IsEmpty() {
@@ -237,7 +237,7 @@ func TestIsFull(t *testing.T) {
 	}
 }
 
-func TestContains(t *testing.T) {
+func TestQueueContains(t *testing.T) {
 	q := NewQueue[int]()
 
 	if q.Contains(1) {
@@ -256,7 +256,7 @@ func TestContains(t *testing.T) {
 	}
 }
 
-func TestToSlice(t *testing.T) {
+func TestQueueToSlice(t *testing.T) {
 	q := NewQueue[int]()
 
 	// Test empty queue
@@ -418,7 +418,7 @@ func TestCloneBounded(t *testing.T) {
 	}
 }
 
-func TestForEach(t *testing.T) {
+func TestQueueForEach(t *testing.T) {
 	q := NewQueue[int]()
 	q.Enqueue(1)
 	q.Enqueue(2)
@@ -465,7 +465,7 @@ func TestFilter(t *testing.T) {
 	}
 }
 
-func TestString(t *testing.T) {
+func TestQueueString(t *testing.T) {
 	q := NewQueue[int]()
 	q.Enqueue(1)
 	q.Enqueue(2)

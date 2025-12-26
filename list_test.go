@@ -282,7 +282,7 @@ func TestGetLast(t *testing.T) {
 	}
 }
 
-func TestContains(t *testing.T) {
+func TestListContains(t *testing.T) {
 	list := NewLinkedList[int]()
 
 	if list.Contains(1) {
@@ -339,7 +339,7 @@ func TestFind(t *testing.T) {
 	}
 }
 
-func TestLen(t *testing.T) {
+func TestListLen(t *testing.T) {
 	list := NewLinkedList[int]()
 
 	if list.Len() != 0 {
@@ -354,7 +354,7 @@ func TestLen(t *testing.T) {
 	}
 }
 
-func TestIsEmpty(t *testing.T) {
+func TestListIsEmpty(t *testing.T) {
 	list := NewLinkedList[int]()
 
 	if !list.IsEmpty() {
@@ -372,7 +372,7 @@ func TestIsEmpty(t *testing.T) {
 	}
 }
 
-func TestClear(t *testing.T) {
+func TestListClear(t *testing.T) {
 	list := NewLinkedList[int]()
 	list.Append(1)
 	list.Append(2)
@@ -545,7 +545,7 @@ func TestCircularListReverse(t *testing.T) {
 	}
 }
 
-func TestToSlice(t *testing.T) {
+func TestListToSlice(t *testing.T) {
 	list := NewLinkedList[int]()
 
 	// Empty list
@@ -569,7 +569,7 @@ func TestToSlice(t *testing.T) {
 	}
 }
 
-func TestForEach(t *testing.T) {
+func TestListForEach(t *testing.T) {
 	list := NewLinkedList[int]()
 	list.Append(1)
 	list.Append(2)
@@ -585,7 +585,7 @@ func TestForEach(t *testing.T) {
 	}
 }
 
-func TestString(t *testing.T) {
+func TestListString(t *testing.T) {
 	list := NewLinkedList[int]()
 
 	// Empty list

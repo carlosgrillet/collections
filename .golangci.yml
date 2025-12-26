@@ -1,0 +1,52 @@
+version: "2"
+
+run:
+  timeout: 5m
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
+
+linters:
+  default: none
+  enable:
+    #- bodyclose
+    #- depguard
+    #- dogsled
+    #- dupl
+    - errcheck
+    #- exhaustive
+    #- funlen
+    #- gochecknoinits
+    - goconst
+    - gocritic
+    #- gocyclo
+    #- goprintffuncname
+    - gosec
+    - govet
+    - ineffassign
+    #- lll
+    - misspell
+    #- mnd
+    #- nakedret
+    #- noctx
+    - nolintlint
+    #- rowserrcheck
+    - staticcheck
+    - unconvert
+    #- unparam
+    - unused
+    #- whitespace
+  exclusions:
+    presets:
+      - common-false-positives
+      - legacy
+      - std-error-handling
+  settings:
+    govet:
+      # Disable buildtag check to allow dual build tag syntax (both //go:build and // +build).
+      # This is necessary for Go 1.15 compatibility since //go:build was introduced in Go 1.17.
+      # This can be removed once Cobra requires Go 1.17 or higher.
+      disable:
+        - buildtag

@@ -78,7 +78,7 @@ func TestInsertOrder(t *testing.T) {
 	}
 }
 
-func TestIsEmpty(t *testing.T) {
+func TestTreeIsEmpty(t *testing.T) {
 	tree := NewTree[int]()
 
 	if !tree.IsEmpty() {
@@ -96,7 +96,7 @@ func TestIsEmpty(t *testing.T) {
 	}
 }
 
-func TestSize(t *testing.T) {
+func TestTreeSize(t *testing.T) {
 	tree := NewTree[int]()
 
 	if tree.Size() != 0 {
@@ -111,7 +111,7 @@ func TestSize(t *testing.T) {
 	}
 }
 
-func TestClear(t *testing.T) {
+func TestTreeClear(t *testing.T) {
 	tree := NewTree[int]()
 	tree.Insert(1)
 	tree.Insert(2)
@@ -127,7 +127,7 @@ func TestClear(t *testing.T) {
 	}
 }
 
-func TestContains(t *testing.T) {
+func TestTreeContains(t *testing.T) {
 	tree := NewTree[int]()
 
 	if tree.Contains(1) {
@@ -400,7 +400,7 @@ func TestCountLeaves(t *testing.T) {
 	}
 }
 
-func TestString(t *testing.T) {
+func TestTreeString(t *testing.T) {
 	tree := NewTree[int]()
 
 	// Empty tree
@@ -457,7 +457,7 @@ func TestTreeWithStructs(t *testing.T) {
 	}
 
 	levelOrder := tree.LevelOrder()
-	if levelOrder[0].Name != "Alice" {
+	if levelOrder[0].Name != "Alice" { //nolint:goconst
 		t.Errorf("Expected first person to be Alice, got %s", levelOrder[0].Name)
 	}
 }
