@@ -3,7 +3,7 @@
   <h1> collections </h1>
 
   <p>  A package with generic data structures for Go applications.</p>
-  <p>  (ready-to-use menus, prompts, completions, and more)  </p>
+  <p>  (Queues, linked lists, binary trees and more)</p>
 </div>
 
 
