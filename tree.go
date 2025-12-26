@@ -2,9 +2,15 @@ package collections
 
 import "fmt"
 
+// Doc
 type Node[T any] struct {
+	// Value holds the data that the node is going to carry
 	Value T
-	Left  *Node[T]
+
+	// Pointer to the next Node
+	Left *Node[T]
+
+	// Pointer to the next Node
 	Right *Node[T]
 }
 
@@ -44,14 +50,14 @@ func (t *Tree[T]) String() string {
 
 // MaxDepth return the maximum depth of the tree using DFS algorithm
 func (t *Tree[T]) MaxDepth() int {
-	return DFS(t.root)	
+	return dfs(t.root)
 }
 
-func DFS[T any](root *Node[T]) int {
+func dfs[T any](root *Node[T]) int {
 	if root == nil {
 		return 0
 	}
-	left := DFS(root.Left)
-	right := DFS(root.Right)
+	left := dfs(root.Left)
+	right := dfs(root.Right)
 	return 1 + max(left, right)
 }
