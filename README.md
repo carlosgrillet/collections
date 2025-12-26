@@ -10,7 +10,7 @@
 <!-- Badges -->
 <p align="center">
   <a href="https://github.com/carlosgrillet/collections/actions/workflows/go.yml">
-    <img src="https://github.com/carlosgrilelt/collections/actions/workflows/go.yml/badge.svg?branch=main"
+    <img src="https://github.com/carlosgrillet/collections/actions/workflows/go.yml/badge.svg?branch=main"
       alt="Github Actions (workflows)" />
   </a>
 
